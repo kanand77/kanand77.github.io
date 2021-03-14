@@ -66,11 +66,11 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfolio Details</h2>
+          <h2>Stanford Radiological Sciences Laboratory</h2>
           <ol>
             <li><a href="/index.html#portfolio">Portfolio Home</a></li>
             <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
-            <li>NAME OF THIS PROJECT</li>
+            <li>RSL REU</li>
           </ol>
         </div>
 
@@ -84,27 +84,37 @@
         <div class="portfolio-details-container">
 
           <div class="owl-carousel portfolio-details-carousel">
-            <img src="/assets/img/portfolio/portfolio-details-1.jpg" class="img-fluid" alt="">
-            <img src="/assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
-            <img src="/assets/img/portfolio/portfolio-details-3.jpg" class="img-fluid" alt="">
+            <img src="/assets/img/portfolio/rsl_cnn.jpg" class="img-fluid" alt="">
+            <!-- <img src="/assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
+            <img src="/assets/img/portfolio/portfolio-details-3.jpg" class="img-fluid" alt=""> -->
           </div>
 
           <div class="portfolio-info">
-            <h3>Project information</h3>
+            <h3>Research Intern</h3>
             <ul>
-              <li><strong>Category</strong>: Web design</li>
-              <li><strong>Client</strong>: ASU Company</li>
-              <li><strong>Project date</strong>: 01 March, 2020</li>
-              <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              <li><strong>Skills</strong>: Machine Learning, Neural Networks, UNET</li>
+              <li><strong>Organization</strong>: Stanford Medicine</li>
+              <li><strong>Duration</strong>: April to August 2020</li>
+              <!-- <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li> -->
             </ul>
           </div>
 
         </div>
 
         <div class="portfolio-description">
-          <h2>This is an example of portfolio detail</h2>
+          <h2>I built a neural network, UNET architecture, to solve a computer vision problem</h2>
           <p>
-            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+            I was awared a major fellowship grant to work with Dr. Ennis and Dr. Loecher in the Stanford Cardiac MRI research group the summer after freshman
+            year at Stanford. We sought to tackle the intense processing power and time needed to convert cardiac MRI images to an echo image, a diagnostic tool
+            that is useful for a physician to gauge a patient's heart function. Our goal was to eliminate the current complicated process and replace it with a 
+            neural network that could do the image transformation instead. 
+          </p>
+          <p>
+            We decided to implement this with a UNET neural network as we already have mastered this approach in the lab. My role was designing this neural network in Python,
+            testing its functionality and outputting images of its operation in Jupyter Notebook, and construct the overall data pipeline to make it easy to test future
+            iterations. Upon completing this, I optimized the network, focusing on key hyperparameters such as pool size, training samples and length, and loss functions. Most notably,
+            I edited the loss function from the typical MSE to Huber to account for our bimodal training data. Overall we had strong results, with low loss values for the validation set
+            and are looking to share this algorithm via a poster presentation in the future. 
           </p>
         </div>
       </div>
