@@ -84,27 +84,34 @@
         <div class="portfolio-details-container">
 
           <div class="owl-carousel portfolio-details-carousel">
-            <img src="/assets/img/portfolio/PercAssist Lab.jpg" class="img-fluid" alt="">
+            <img src="/assets/img/portfolio/percassist_ecg.jpg" class="img-fluid" alt="">
             <img src="/assets/img/portfolio/Percassist-diagram.png" class="img-fluid" alt="">
-            <!-- <img src="/assets/img/portfolio/portfolio-details-3.jpg" class="img-fluid" alt=""> -->
           </div>
 
           <div class="portfolio-info">
             <h3>Software Engineer Intern</h3>
             <ul>
-              <li><strong>Category</strong>: Web design</li>
-              <li><strong>Client</strong>: ASU Company</li>
-              <li><strong>Project date</strong>: 01 March, 2020</li>
-              <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              <li><strong>Skills</strong>: MATLAB, Object Oriented Code, Algorithm Design</li>
+              <li><strong>Company</strong>: PercAssist</li>
+              <li><strong>Duration</strong>: September 2020 to January 2021</li>
             </ul>
           </div>
 
         </div>
 
         <div class="portfolio-description">
-          <h2>This is an example of portfolio detail</h2>
+          <h2>My first foray into industry, I built the primary detection algorithm for our heart device</h2>
           <p>
-            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+            PercAssist is a biotech startup headquartered in the bay aiming to build heart devices for end-stage heart failure patients. The target group has compromised hearts
+            that struggle to provide blood for the rest of the body, or essentially have low blood flow. Our goal is to insert a device into the heart to essentially assist its beating
+            and have it perfectly in sync with the body's natural rhythm. To synchronize the device with the heart, we need to track the electrical signals the heart outputs for every beat
+            also known as the QRS signal. My role was to architect this QRS detection algorithm. 
+          </p>
+          <p>
+            Primarily working in MATLAB due its easy data visualization and organization, I built an algorithm capable of tracking the QRS of the heart with minimal false positives. As we don't
+            want to harm the patient, the algorithm has to be cautious in which signals it classifies as a heart beat. On the other hand, we want to maximize the time the device is on to help the patient
+            to the greatest extent. To do this we have to overcome the large amount of fixed delays imparted by the filters. Alongside our engineering team, I was able to find a way to minimize overall false positives
+            and still greatly slash delays which enabled the device to be active in a far larger range of heart beats. 
           </p>
         </div>
       </div>
