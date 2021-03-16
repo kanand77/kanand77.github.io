@@ -66,11 +66,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfolio Details</h2>
+          <h2>Implicit List and Explicit List Heap Allocator</h2>
           <ol>
             <li><a href="/index.html#portfolio">Portfolio Home</a></li>
-            <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
-            <li>NAME OF THIS PROJECT</li>
+            <li>Heap Allocator</li>
           </ol>
         </div>
 
@@ -84,27 +83,39 @@
         <div class="portfolio-details-container">
 
           <div class="owl-carousel portfolio-details-carousel">
-            <img src="/assets/img/portfolio/portfolio-details-1.jpg" class="img-fluid" alt="">
-            <img src="/assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
-            <img src="/assets/img/portfolio/portfolio-details-3.jpg" class="img-fluid" alt="">
+            <img src="/assets/img/portfolio/heap_allocator_free_block.png" class="img-fluid" alt="">
           </div>
 
           <div class="portfolio-info">
-            <h3>Project information</h3>
+            <h3>Low Level Project</h3>
             <ul>
-              <li><strong>Category</strong>: Web design</li>
-              <li><strong>Client</strong>: ASU Company</li>
-              <li><strong>Project date</strong>: 01 March, 2020</li>
-              <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              <li><strong>Skills</strong>: C, x86 Assembly, Void pointers and pointer arithmetic</li>
+              <li><strong>Class</strong>: CS 107: Computer Organization and Systems</li>
+              <li><strong>Project date</strong>: June 2020 </li>
             </ul>
           </div>
 
         </div>
 
         <div class="portfolio-description">
-          <h2>This is an example of portfolio detail</h2>
+          <h2>Constructing my own heap allocator that supports in-place reallocation and free block coalescing</h2>
           <p>
-            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+            As the capstone project in my CS 107 course, I was tasked with building two heap allocators that could support the following memory allocation function:
+            malloc, realloc and free. Our key goal is correctness, to be able to serve 100% of well-formed requests. On top of that, we should try to optimize for both utilization and efficiency. 
+            For utilization, we should recycle free blocks when capable, compactly use memory, and have low overhead costs. For efficiency, the allocator should be fast in finding open spots and 
+            setting memory. 
+          </p>
+          <p>
+            When designing the implicit list allocator, I implemented malloc by searching the heap block-by-block for a free spot. I was able to traverse to a free location by checking the headers, 
+            starting from the beginning of the heap, that store information on size of block and whether it is currently free or not. Although this is a good first take, there is room here to improve in 
+            both efficiency and utilization. With the explicit list allocator, each header is double in size and stores next/prev pointers of each free block. Malloc only searches free blocks, resulting in 
+            faster allocation. On top of that, utilization is improved because for each free call, I check to see if there are neighboring free blocks to coalesce into one larger block. This both increases 
+            usable memory and gets rid of old headers. Finally, there is also in-place reallocation, where if client reallocates to a smaller size, or neighboring free blocks can absorb the size growth, these operations
+            are done first before moving memory to a new location. Overall this leads to large gains in utilization and help with efficiency. 
+          </p>
+          <p> 
+            There are many skills I mastered during the course of this project, most notably becoming far more comfortable with C and the variety of data structures needed to build my own heap allocator. This includes 
+            experience with pointers, void pointer referencing, pointer arithmetic, doubly linked lists, memory management, and bit operations. 
           </p>
         </div>
       </div>
